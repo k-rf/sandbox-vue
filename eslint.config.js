@@ -8,7 +8,7 @@ const pluginUnusedImport = require("eslint-plugin-unused-imports");
 
 /** @type { import("eslint").Linter.FlatConfig } */
 const ignorePattern = {
-  ignores: ["**/dist", "**/node_modules", "**/*.config.{,m,c}js"],
+  ignores: ["**/dist", "**/node_modules", "**/*.config.{,m,c}js", "**/.nuxt"],
 };
 
 /** @type { import("eslint").Linter.FlatConfig } */

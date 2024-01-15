@@ -1,0 +1,22 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+if [ -z $2 ]; then
+  sed -i '1i\
+\
+\
+# ==== Emojis ====\
+# ✨ :sparkles: 部分的な機能追加 (コンポーネント、クラス、メソッド、サービス等)\
+# 🎉 :tada: 盛大に祝うべき大きな機能追加 (機能、画面等)\
+# 🚀 :rocket: 機能改善 (性能)\
+# 🎨 :art: 機能改善 (UI/UX)\
+# 📷 :camera: スナップショットの取得、更新\
+# 🚑 :ambulance: バグ修正\
+# ♻️ :recycle: リファクタリング\
+# 🔥 :fire: 削除、除去 (コード、機能)\
+# 💚 :green_heart: テスト等の修正・改善\
+# 📦 :package: パッケージ関連\
+# 🔧 :wrench: ツール等の設定\
+# 📝 :pencil: ドキュメント\
+# 🚧 :construction: WIP (Work In Progress: 作業中)' $1
+fi

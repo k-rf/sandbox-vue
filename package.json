@@ -1,0 +1,61 @@
+{
+  "name": "sandbox-vue",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "check:lint": "eslint --fix --cache . && markuplint --fix .",
+    "check:format": "prettier --write .",
+    "check:type": "tsc --project tsconfig.json --pretty --noEmit",
+    "check:doc": "textlint --fix --cache . && markdownlint --fix .",
+    "check:all": "npm-run-all -s check:type check:format check:lint check:doc",
+    "test": "jest --runInBand",
+    "test:cov": "jest --runInBand --coverage=true",
+    "test:watch": "jest --runInBand --watch"
+  },
+  "engines": {
+    "npm": "Please use the pnpm.",
+    "yarn": "Please use the pnpm."
+  },
+  "dependencies": {
+    "fp-ts": "^2.16.2",
+    "remeda": "^1.36.0",
+    "ts-pattern": "^5.0.6"
+  },
+  "devDependencies": {
+    "@cspell/eslint-plugin": "^8.3.2",
+    "@markuplint/jsx-parser": "^3.12.0",
+    "@markuplint/react-spec": "^3.13.0",
+    "@tsd/typescript": "^5.3.3",
+    "@types/jest": "^29.5.11",
+    "@types/node": "20.11.2",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "@vercel/ncc": "^0.38.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-sonarjs": "^0.23.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "jest-runner-tsd": "^6.0.0",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.0",
+    "markdownlint-cli": "^0.38.0",
+    "markuplint": "^3.15.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.2",
+    "rimraf": "^5.0.5",
+    "scaffdog": "^3.0.0",
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "textlint": "^13.4.1",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}
